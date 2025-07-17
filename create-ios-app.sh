@@ -746,4 +746,19 @@ cat > "$SANITIZED_NAME/$SANITIZED_NAME/Assets.xcassets/AppIcon.appiconset/Conten
 }
 EOF
 
+cat > "$SANITIZED_NAME/.gitignore" << EOF
+UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
+bookmarks.plist
+bookmarks.plist
+xcschememanagement.plist
+*.xcworkspacedata
+*.xcscheme
+EOF
+
+cd $SANITIZED_NAME
+git init
+git add .
+git commit -a -m init
+
 echo "Successfully created project structure for '$SANITIZED_NAME'"
