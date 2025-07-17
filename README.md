@@ -4,6 +4,8 @@
 create-ios-app.sh bash script automates UIKit project creation with opinionated defaults:
 1. Minimum iOS version: 13.0
 2. "Debug executable" is disabled when a project is created
+3. An empty repo is initialized with some .gitignored files
+4. Initial git commit is created
 
 To create a project, simply run `sh create-ios-app.sh 'my app'` with the name of your app (instead of 'my app')
 When a project is created for the first time, it's going to ask you for your organization identifier, which you can usually find when you press "command + Shift + N" to create a new project, select project type, hit "Next" and see the project's options:
