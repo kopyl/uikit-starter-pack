@@ -62,6 +62,8 @@ mkdir -p "$SANITIZED_NAME/$SANITIZED_NAME/Assets.xcassets/AppIcon.appiconset"
 mkdir -p "$SANITIZED_NAME/$SANITIZED_NAME/Base.lproj"
 mkdir -p "$SANITIZED_NAME/$SANITIZED_NAME/Views/Base.lproj"
 
+mkdir -p "$SANITIZED_NAME/$SANITIZED_NAME/Root"
+
 # Create project.pbxproj
 cat > "$SANITIZED_NAME/$SANITIZED_NAME.xcodeproj/project.pbxproj" << EOF
 {
@@ -119,14 +121,22 @@ cat > "$SANITIZED_NAME/$SANITIZED_NAME.xcodeproj/project.pbxproj" << EOF
 		A11EDACC2C4791F2002C79B6 /* SANITIZED_NAME */ = {
 			isa = PBXGroup;
 			children = (
+				A14AC1832C4796A9003AA6B9 /* Root */,
 				A14AC1842C4796A9003AA6B9 /* Views */,
-				A11EDACD2C4791F2002C79B6 /* AppDelegate.swift */,
-				A11EDACF2C4791F2002C79B6 /* SceneDelegate.swift */,
 				A11EDAD62C4791F4002C79B6 /* Assets.xcassets */,
 				A11EDAD82C4791F4002C79B6 /* LaunchScreen.storyboard */,
 				A11EDADB2C4791F4002C79B6 /* Info.plist */,
 			);
 			path = "SANITIZED_NAME";
+			sourceTree = "<group>";
+		};
+		A14AC1832C4796A9003AA6B9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A11EDACD2C4791F2002C79B6 /* AppDelegate.swift */,
+				A11EDACF2C4791F2002C79B6 /* SceneDelegate.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		A14AC1842C4796A9003AA6B9 /* Views */ = {
@@ -525,7 +535,7 @@ cat > "$SANITIZED_NAME/$SANITIZED_NAME.xcodeproj/xcshareddata/xcschemes/$SANITIZ
 EOF
 
 # Create AppDelegate.swift
-cat > "$SANITIZED_NAME/$SANITIZED_NAME/AppDelegate.swift" << 'EOF'
+cat > "$SANITIZED_NAME/$SANITIZED_NAME/Root/AppDelegate.swift" << 'EOF'
 import UIKit
 
 @main
@@ -533,7 +543,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {}
 EOF
 
 # Create SceneDelegate.swift
-cat > "$SANITIZED_NAME/$SANITIZED_NAME/SceneDelegate.swift" << 'EOF'
+cat > "$SANITIZED_NAME/$SANITIZED_NAME/Root/SceneDelegate.swift" << 'EOF'
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIGestureRecognizerDelegate {
