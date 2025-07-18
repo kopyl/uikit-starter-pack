@@ -42,7 +42,7 @@ else
   echo "Using saved organization identifier: $ORG_IDENTIFIER"
 fi
 
-SANITIZED_NAME=$(echo "$APP_NAME" | sed 's/[^a-zA-Z0-9 _-]//g' | sed 's/[[:space:]]\+/-/g')
+SANITIZED_NAME=$(echo "$APP_NAME" | sed -E 's/[^a-zA-Z0-9]+/-/g')
 BUNDLE_ID_NAME=$(echo "$SANITIZED_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]//g')
 
 # Create main project directory
