@@ -366,6 +366,7 @@ cat > "$SANITIZED_NAME/$SANITIZED_NAME.xcodeproj/project.pbxproj" << EOF
 				DEVELOPMENT_TEAM = $DEVELOPMENT_TEAM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SANITIZED_NAME/Info.plist";
+                INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -393,6 +394,7 @@ cat > "$SANITIZED_NAME/$SANITIZED_NAME.xcodeproj/project.pbxproj" << EOF
 				DEVELOPMENT_TEAM = $DEVELOPMENT_TEAM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SANITIZED_NAME/Info.plist";
+                INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
