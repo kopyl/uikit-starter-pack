@@ -6,6 +6,7 @@ create-ios-app.sh bash script automates UIKit project creation with opinionated 
 2. "Debug executable" is disabled when a project is created
 3. An empty repo is initialized with some .gitignored files
 4. Initial git commit is created
+5. 'App Uses Non-Exempt Encryption' set to 'NO' in Info.plist file
 
 Here is an example of a project's file structure after running the script:
 ```
