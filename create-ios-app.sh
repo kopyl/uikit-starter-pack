@@ -610,7 +610,6 @@ class MainViewController: UIViewController {
     
     override func loadView() {
         view = MainView()
-        mainView = view as? MainView
     }
     
     override func viewDidLoad() {
