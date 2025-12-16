@@ -606,8 +606,6 @@ class MainView: UIView {
 }
 
 class MainViewController: UIViewController {
-    private var mainView: MainView!
-    
     override func loadView() {
         view = MainView()
     }
