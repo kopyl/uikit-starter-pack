@@ -50,3 +50,15 @@ When a project is created for the first time, it's going to ask you for your org
 
 Here you might see an example output of the `sh create-ios-app.sh 'my app'` command:
 <img width="701" height="236" alt="image" src="https://github.com/user-attachments/assets/459ce064-2627-47fd-849d-3d5d3e5e60ea" />
+
+Add this to your bash profile to be able to create apps from cli like:
+`new ios app app-name`
+```sh
+new() {
+    if [[ "$1" == "ios" && "$2" == "app" ]]; then
+        sh create-ios-app.sh "$3"
+    fi
+}
+```
+And make sure your specify correct path to create-ios-app.sh from this repo
+
