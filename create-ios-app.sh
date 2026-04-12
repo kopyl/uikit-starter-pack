@@ -764,6 +764,7 @@ bookmarks.plist
 xcschememanagement.plist
 *.xcworkspacedata
 *.xcscheme
+.DS_Store
 EOF
 
 cd $SANITIZED_NAME
